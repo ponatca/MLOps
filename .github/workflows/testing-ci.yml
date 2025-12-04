@@ -17,6 +17,7 @@ jobs:
     
     - name: Debug - Show Makefile
       run: |
+        cd PYTEST-TIPS-TRICKS
         echo "=== Makefile contents ==="
         cat Makefile
         echo "=== Directory listing ==="
@@ -26,6 +27,7 @@ jobs:
     
     - name: Install dependencies
       run: |
+        cd PYTEST-TIPS-TRICKS
         # Explicitly install pytest, pylint, black first
         pip install pytest pylint black
         # Then run make install
@@ -33,10 +35,12 @@ jobs:
     
     - name: Lint with pylint
       run: |
+        cd PYTEST-TIPS-TRICKS
         make lint || echo "Linting completed (warnings allowed)"
     
     - name: Test with pytest
       run: |
+        cd PYTEST-TIPS-TRICKS
         make test || echo "Testing completed"
     
     - name: Format code
