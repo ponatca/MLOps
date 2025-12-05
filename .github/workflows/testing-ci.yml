@@ -47,6 +47,3 @@ jobs:
       run: |
         cd PYTEST-TIPS-TRICKS
         make format
-    - name: Format code
-      run: |
-        make format
