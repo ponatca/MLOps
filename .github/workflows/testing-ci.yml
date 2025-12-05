@@ -42,7 +42,11 @@ jobs:
       run: |
         cd PYTEST-TIPS-TRICKS
         make test || echo "Testing completed"
-    
+
+    - name: Format code
+      run: |
+        cd PYTEST-TIPS-TRICKS
+        make format
     - name: Format code
       run: |
         make format
